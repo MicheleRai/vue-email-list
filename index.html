@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Raccolta mail</title>
     <!-- vue -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js" defer></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2"></script> -->
@@ -17,12 +17,16 @@
 </head>
 <body>
     <div id="root">
+        <h1>Clicka qui per generare le tue mail</h1>
+        <div class="arrow">&dArr;</div>
         <div class="btn-container">
-            <button @click="getArray">genera mail</button>
+            <button @click="getArray">GENERA MAIL</button>
         </div>
-        <div class="email-container" v-for="(mail, i) in arrEmail">
-            <div class="mail">{{mail}}</div>
-        </div>
+        <ul class="email-list">
+            <li class="email" v-for="(mail, i) in arrEmail">
+                {{mail}}
+            </li>
+        </ul>
     </div>
 </body>
 </html>
